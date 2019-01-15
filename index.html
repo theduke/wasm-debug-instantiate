@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="app"></div>
+ <script>
+</script>
+<script src="./build/wasm_crash.js"></script>
+<script>
+        console.log("Loading wasm...");
+        let start = Date.now();
+        wasm_crash('./build/wasm_crash_bg.wasm').then(() => {
+            const timeTaken = Date.now() - start;
+            console.log('WASM loaded: ' + timeTaken);
+            console.log("Starting wasm...");
+            circle.start()
+            console.log('Started');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+[package]
+name = "wasm_crash"
+version = "0.1.0"
+authors = ["Christoph Herzog <chris@theduke.at>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.31"
+wasm-bindgen-futures = "0.3.8"
+js-sys = "0.3.8"
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+    "Document",
+    "console",
+    "Element",
+    "Event",
+    "EventTarget",
+    "History",
+    "HtmlElement",
+    "HtmlInputElement",
+    "HtmlTextAreaElement",
+    "HtmlSelectElement",
+    "Location",
+    "MouseEvent",
+    "Node",
+    "NodeList",
+    "Performance",
+    "Request",
+    "RequestInit",
+    "RequestMode",
+    "Response",
+    "Storage",
+    "Text",
+    "Window",
+]
